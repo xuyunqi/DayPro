@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.iguure.daypro.MainActivity">
+
+    <!-- 底部菜单栏固定，中间内容区可拖动 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 测试按钮 -->
+            <!--<Button-->
+                <!--android:id="@+id/testButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Test"/>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!-- 分割线1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="7"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="5"
+                android:background="#666"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="7"/>
+
+        </LinearLayout>
+
+        <!-- 月份 -->
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="10"-->
+            <!--android:text="SEPTEMBER"-->
+            <!--android:gravity="center"/>-->
+
+        <Spinner
+            android:id="@+id/monthSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:gravity="center"
+            android:entries="@array/month"
+            />
+
+        <!-- 分割线2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="1"
+                android:background="#666"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="5"/>
+
+        </LinearLayout>
+
+        <!-- 年份 -->
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="6"-->
+            <!--android:text="2016"-->
+            <!--android:gravity="center"/>-->
+
+        <Spinner
+            android:id="@+id/dateSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:gravity="center"
+            />
+
+        <!-- 分割线3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="1"
+                android:background="#666"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="5"/>
+
+        </LinearLayout>
+
+        <!-- 添加新日记 -->
+        <TextView
+            android:id="@+id/addNewDiary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="＋"
+            android:gravity="center"/>
+
+        <!-- 分割线4 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="1"
+                android:background="#666"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_weight="5"/>
+
+        </LinearLayout>
+
+        <!-- 浏览日记 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="4"/>
+
+            <TextView
+                android:id="@+id/viewAll"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="3"
+                android:background="#666"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
